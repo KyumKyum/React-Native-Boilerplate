@@ -3,8 +3,8 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-        "android:dev": "react-native run-android --variant=dev",
-        "android:prod": "react-native run-android --variant=prod",
+        "android:dev": "react-native run-android  --terminal terminal",
+        "android:prod": "react-native run-android --mode=prod --terminal terminal",
         "ios": "react-native run-ios",
         "lint": "eslint .",
         "start": "react-native start",
