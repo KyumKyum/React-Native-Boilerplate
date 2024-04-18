@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
-import {useTranslation} from 'react-i18next';
-import {useI18n} from '../hooks/usei18n.ts';
+import useI18n from '../hooks/usei18n';
 const Entry = () => {
     const t = useI18n();
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 import {NavigationContainer} from '@react-navigation/native';
-import RootStackNavigator from './RootStackNavigator.tsx';
+import RootStackNavigator from './RootStackNavigator';
 
 const ApplicationNavigator: React.FC = observer(() => {
     //* Add Splash if required (Use Store)

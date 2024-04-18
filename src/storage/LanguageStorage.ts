@@ -1,9 +1,10 @@
-import Storage from './Storage.ts';
+import KVStorage from './provider/KVStorage';
+import {StorageInterface} from './provider/StorageInterface';
 
 //* Ensures Singleton pattern for storage
 
 const LANGUAGE_STORAGE = 'LANGUAGE_STORAGE';
-class LanguageStorage extends Storage {
+class LanguageStorage extends KVStorage implements StorageInterface {
     private static instance: LanguageStorage | null = null;
 
     constructor() {
@@ -18,14 +19,18 @@ class LanguageStorage extends Storage {
     }
 
     get(): string {
-        const lang = super.storage.getString(LANGUAGE_STORAGE);
-        if (lang === undefined) return 'EN';
+        const lang = super.get(LANGUAGE_STORAGE);
+        if (lang === null) return 'EN';
         return lang;
     }
 
     set(value: string): void {
         const lang = value.toLowerCase() === 'en' ? 'en' : 'ko';
-        super.storage.set(LANGUAGE_STORAGE, lang);
+        super.set(LANGUAGE_STORAGE, lang);
+    }
+
+    remove(key: string): void {
+        super.remove(key);
     }
 }
 

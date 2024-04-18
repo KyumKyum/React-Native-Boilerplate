@@ -1,6 +1,6 @@
 import {TouchableOpacity, TouchableOpacityProps} from 'react-native';
 import React from 'react';
-import userInteractionStore from '../../stores/UserInteraction.ts';
+import userInteractionStore from '../../stores/UserInteraction';
 
 interface DebouncedTouchableOpacityProps extends TouchableOpacityProps {
     onPress?: (() => void) | (<T>() => T);

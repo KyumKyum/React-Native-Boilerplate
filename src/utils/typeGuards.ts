@@ -1,4 +1,4 @@
-import {Err, Ok, Result} from '../types/Result.ts';
+import {Err, Ok, Result} from '../types/Result';
 
 export function isOk<T>(result: Result<T, any>): result is Ok<T> {
     return result.type === 'OK';

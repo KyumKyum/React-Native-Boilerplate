@@ -1,11 +1,10 @@
 import i18n from 'i18next';
-import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
 import {initReactI18next} from 'react-i18next';
 import Config from 'react-native-config';
 
 import en from './en.json';
 import ko from './ko.json';
-import SUPPORTING_LANGUAGE from './supportingLanguage.ts';
+import SUPPORTING_LANGUAGE from './supportingLanguage';
 
 const translationResources = {
     en: {
@@ -16,8 +15,7 @@ const translationResources = {
     },
 };
 
-i18n.use(I18nextBrowserLanguageDetector) // Detect User Language
-    .use(initReactI18next) // i18n -> react-i18next
+i18n.use(initReactI18next) // Detect User Language // i18n -> react-i18next
     .init({
         //Init block
         debug: Config.ENV === 'DEVELOPMENT',
@@ -31,4 +29,5 @@ i18n.use(I18nextBrowserLanguageDetector) // Detect User Language
         ],
         resources: translationResources,
         defaultNS: 'translation',
+        compatibilityJSON: 'v3',
     });

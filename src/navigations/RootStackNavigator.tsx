@@ -1,6 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Entry from '../pages/Entry.tsx';
+import Entry from '../pages/Entry';
 
 export type RootStackParamList = {
     //* Add page and required prop types in here.

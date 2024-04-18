@@ -1,5 +1,5 @@
-import SUPPORTING_LANGUAGE from './supportingLanguage.ts';
-import language from '../storage/LanguageStorage.ts';
+import SUPPORTING_LANGUAGE from './supportingLanguage';
+import language from '../storage/LanguageStorage';
 import i18n from 'i18next';
 
 const changeLanguage = (lang: SUPPORTING_LANGUAGE) => {
