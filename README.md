@@ -13,8 +13,16 @@
 <img alt="i18next" src ="https://img.shields.io/badge/i18next-26A69A.svg?&style=for-the-badge&logo=i18next&logoColor=white"/>
 <img alt="RN Paper" src ="https://img.shields.io/badge/Material Design (React Native Paper)-757575.svg?&style=for-the-badge&logo=materialdesign&logoColor=white"/>
 <img alt="Zod" src ="https://img.shields.io/badge/Zod-3E67B1.svg?&style=for-the-badge&logo=zod&logoColor=white"/>
-<img alt="Apache Kafka" src ="https://img.shields.io/badge/Apache Kafka-231F20.svg?&style=for-the-badge&logo=Apache Kafka&logoColor=white"/>
+<img alt="React Native MMKV" src ="https://img.shields.io/badge/React Native MMKV-231F20.svg?&style=for-the-badge&&logoColor=white"/>
 </p>
+
+### Developement
+```bash
+npm run android:dev
+```
+
+### Notice
+- The MMKV uses NDK version `23.1.7779620`. Need to fix the version at build.gradle or ndk.dir.
 
 
 > TODO: 
