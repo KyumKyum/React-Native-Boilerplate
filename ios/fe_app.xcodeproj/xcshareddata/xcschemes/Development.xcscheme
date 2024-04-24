@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;&#10;cp &quot;${PROJECT_DIR}/../src/env/.env.development&quot; &quot;${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/.env&quot;&#10;&#10;&quot;${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb&quot;&#10;">
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;mkdir -p tmp # Make a temporary file to copy dedicated env.&#10;&#10;cp &quot;${PROJECT_DIR}/../src/env/.env.development&quot; &quot;${PROJECT_DIR}/tmp/.env&quot;&#10;&#10;&quot;${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb&quot; &quot;${SRCROOT}/tmp/.env&quot; &quot;${SRCROOT}/tmp.xcconfig&quot;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"

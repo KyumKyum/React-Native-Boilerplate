@@ -61,9 +61,12 @@ Release -> [projectName] -> Set as Config
 4. Add Scheme: `Prodjct -> Scheme -> New Scheme`, add `Development` scheme and `Production` scheme.
 5. Set Scheme Action: `Product -> Shceme -> Edit Scheme`, locate `Build -> Pre-actions`, set .env directory as below.
 ```shell
-cp "${PROJECT_DIR}/../src/env/.env.development" #cp "${PROJECT_DIR}/../src/env/.env.production" in production scheme
+mkdir -p tmp # Make a temporary file to copy dedicated env.
 
-"${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb"
+cp "${PROJECT_DIR}/../src/env/.env.development" "${PROJECT_DIR}/tmp/.env" #.env.produiction for Production scheme
+
+"${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb" "${SRCROOT}/tmp/.env" "${SRCROOT}/tmp.xcconfig"
+
 ```
 6. Set .env variables in `Info.plist`. The name should be same with listed in `.env.~`.
 ```plist
@@ -75,4 +78,3 @@ cp "${PROJECT_DIR}/../src/env/.env.development" #cp "${PROJECT_DIR}/../src/env/.
 ### 3. ENV
 1. Locate `src/env`, create `.env.development`, `.env.production`.
 
-> TODO: Fix IOS Error.
