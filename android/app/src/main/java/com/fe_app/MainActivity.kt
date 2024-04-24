@@ -1,4 +1,4 @@
-package com.zkvoting_cj_fe_app
+package com.fe_app
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

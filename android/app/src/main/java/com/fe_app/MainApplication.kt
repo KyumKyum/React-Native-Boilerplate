@@ -1,4 +1,4 @@
-package com.zkvoting_cj_fe_app
+package com.fe_app
 
 import android.app.Application
 import com.facebook.react.PackageList

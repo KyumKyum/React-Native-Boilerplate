@@ -1,3 +1,6 @@
+#react-native-config
+ios/tmp.xcconfig
+
 # env
 src/env/*
 
